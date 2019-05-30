@@ -34,6 +34,7 @@
         transform: translate(-50%,-50%) scale(1.8)
         opacity: 0
 
+
 body
     background: #fafafa
     text-align: center
@@ -75,7 +76,6 @@ body
             width: 100%
             height: 100%
             animation: move 1600ms cubic-bezier(0.65, 0.05, 0.36, 1) infinite
-
             .dot
                 position: absolute
                 width: 12%
@@ -102,9 +102,44 @@ body
 
     .radar,.blip
         position: absolute
-        width: 170px
-        height: 170px
-        background: #cddc39
+        width: 160px
+        height: 160px
+        background: #9C27B0
         border-radius: 50%
         .blip
             animation: radar 1.2s ease-in-out infinite
+
+    .loading
+        width: 60%
+        height: 60%
+        background: #FF9800
+        border-radius: 50%
+        animation: golgol 1s cubic-bezier(0.65, 0.05, 0.36, 1) infinite
+        border-top: 20px solid #3F51B5
+        .circle
+            width: 10%
+            height: 10%
+
+    .outer-circle
+        width: 50%
+        height: 50%
+        background: #FF5722
+        border-radius: 50%
+        animation: golgol 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite
+        .inner-circle,.inner-inner-circle
+            position: absolute
+            box-shadow: 0 0 4px rgba(#000,0.5)
+            width: 60%
+            height: 60%
+            background: #FFC107
+            border-radius: 50%
+            animation: golgol 4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite
+            .inner-inner-circle
+                background: #FFEB3B
+
+    .box
+        width: 60%
+        height: 60%
+        background: yellowgreen
+        border-radius: 50%
+        // border-bottom: 4px solid #000
