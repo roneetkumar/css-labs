@@ -34,6 +34,20 @@
         transform: translate(-50%,-50%) scale(1.8)
         opacity: 0
 
+@keyframes ring
+    50%
+        width: 220px
+        height: 110px
+        left: 50%
+        transform: translate(-50%,-50%)
+
+@keyframes ring2
+    50%
+        width: 80px
+        height: 80px
+        transform: translate(-100%,-50%)
+        // right: 5px
+        left: calc(100% - 15px)
 
 body
     background: #fafafa
@@ -55,6 +69,8 @@ body
     position: relative
     top: 50%
     transform: translateY(-50%)
+
+
 
 .container
     position: relative
@@ -110,8 +126,8 @@ body
             animation: radar 1.2s ease-in-out infinite
 
     .loading
-        width: 60%
-        height: 60%
+        width: 54%
+        height: 54%
         background: #FF9800
         border-radius: 50%
         animation: golgol 1s cubic-bezier(0.65, 0.05, 0.36, 1) infinite
@@ -137,9 +153,25 @@ body
             .inner-inner-circle
                 background: #FFEB3B
 
-    .box
-        width: 60%
-        height: 60%
-        background: yellowgreen
-        border-radius: 50%
-        // border-bottom: 4px solid #000
+    .ring-wrapper
+        width: 220px
+        height: 110px
+        .outer-ring
+            position: absolute
+            width: 220px
+            height: 110px
+            border-radius: 80px
+            border: 6px solid yellowgreen
+            animation: ring2 1s ease infinite
+            box-sizing: border-box
+            // right: 0
+
+        .inner-ring
+            position: absolute
+            width: 80px
+            height: 80px
+            border-radius: 80px
+            border: 6px solid #ff9800
+            left: 15px
+            animation: ring 1s ease infinite
+            box-sizing: border-box
