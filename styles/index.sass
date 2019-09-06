@@ -1,3 +1,10 @@
+$boxWidth: 300px
+$ballWidth: 21px
+$translateX: 55px
+$translateY: 57px
+$time: 2.1s
+$scale: 1.1
+
 *
     margin: 0
     padding: 0
@@ -12,9 +19,9 @@
 
 @keyframes rotate1
     0%,100%
-       transform: translate(0%,-50%)
+        transform: translate(0%,-50%)
     50%
-       transform: translate(-50%,-50%)
+        transform: translate(-50%,-50%)
 @keyframes rotate2
     0%,100%
         transform: translate(-100%,-50%)
@@ -50,8 +57,6 @@
         left: calc(100% - 15px)
 
 @keyframes chalbe
-
-
 body
     // background: #fafafa
     background: #212121
@@ -73,7 +78,6 @@ body
     position: relative
     top: 50%
     transform: translateY(-50%)
-
 
 .container
     position: relative
@@ -167,7 +171,6 @@ body
             border: 8px solid yellowgreen
             animation: ring2 1s ease infinite
             box-sizing: border-box
-            // right: 0
 
         .inner-ring
             position: absolute
@@ -179,9 +182,8 @@ body
             animation: ring 1s ease infinite
             box-sizing: border-box
 
-    .daba
-        width: calc(100% / 4)
-        height: calc(100% / 4)
-        border-radius: 8px
-        background: #000
-        // animation: chalbe 1s ease infinite
+    .new-circle
+        width: 60%
+        height: 60%
+        background: blue
+        border-radius: 50%
